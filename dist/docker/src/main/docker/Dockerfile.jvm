@@ -5,7 +5,7 @@ ENV JAVA_APP_DIR=/deployments \
     JAVA_OPTIONS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager" \
     AB_ENABLED=jmx_exporter
 
-EXPOSE 8080 8778 9779
+EXPOSE 8090 8778 9779
 
 USER 185
 

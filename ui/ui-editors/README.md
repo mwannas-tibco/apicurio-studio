@@ -18,8 +18,8 @@ To run a production build using docker:
 $ npm install
 $ npm run build
 $ docker build -t="apicurio/apicurio-studio-editors" --rm .
-$ docker run --rm -it -p 8080:8080 apicurio/apicurio-studio-editors
+$ docker run --rm -it -p 8090:8090 apicurio/apicurio-studio-editors
 ```
 
-Then open your browser to http://localhost:8080/?demo
+Then open your browser to http://localhost:8090/?demo
 

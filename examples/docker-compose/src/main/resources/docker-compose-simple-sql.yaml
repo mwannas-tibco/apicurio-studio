@@ -23,15 +23,15 @@ services:
       APICURIO_DATASOURCE_USERNAME: apicurio-studio
       APICURIO_DATASOURCE_PASSWORD: password
     ports:
-      - '8080:8080'
+      - '8090:8090'
     depends_on:
       - postgresql
 
   ui:
     image: quay.io/apicurio/apicurio-studio-ui:latest-snapshot
     environment:
-      APICURIO_STUDIO_API_URL: http://localhost:8080/apis/studio/v1
+      APICURIO_STUDIO_API_URL: http://localhost:8090/apis/studio/v1
     ports:
-      - '8888:8080'
+      - '8888:8090'
     depends_on:
       - app

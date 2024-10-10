@@ -225,7 +225,7 @@
                                         <deployInMemory>true</deployInMemory>
                                         <cluster.tests>true</cluster.tests>
                                         <quarkus.http.test-host>localhost</quarkus.http.test-host>
-                                        <quarkus.http.test-port>8080</quarkus.http.test-port>
+                                        <quarkus.http.test-port>8090</quarkus.http.test-port>
                                     </systemPropertyVariables>
                                 </configuration>
                             </execution>
@@ -257,7 +257,7 @@
                                         <cluster.tests>true</cluster.tests>
                                         <deploySql>true</deploySql>
                                         <quarkus.http.test-host>localhost</quarkus.http.test-host>
-                                        <quarkus.http.test-port>8080</quarkus.http.test-port>
+                                        <quarkus.http.test-port>8090</quarkus.http.test-port>
                                     </systemPropertyVariables>
                                 </configuration>
                             </execution>

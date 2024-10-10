@@ -47,7 +47,7 @@ spec:
             failureThreshold: 3
             httpGet:
               path: /health/live
-              port: 8080
+              port: 8090
               scheme: HTTP
             initialDelaySeconds: 10
             periodSeconds: 10
@@ -55,14 +55,14 @@ spec:
             timeoutSeconds: 10
           name: apicurio-studio-memory
           ports:
-            - containerPort: 8080
+            - containerPort: 8090
               name: http
               protocol: TCP
           readinessProbe:
             failureThreshold: 3
             httpGet:
               path: /health/ready
-              port: 8080
+              port: 8090
               scheme: HTTP
             initialDelaySeconds: 10
             periodSeconds: 10
@@ -79,8 +79,8 @@ metadata:
 spec:
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 8090
+      targetPort: 8090
       nodePort: 32586
   selector:
     app: apicurio-studio-memory

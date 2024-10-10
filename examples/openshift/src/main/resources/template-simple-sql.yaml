@@ -128,7 +128,7 @@ objects:
                   value: password
               ports:
                 - name: http
-                  containerPort: 8080
+                  containerPort: 8090
                   protocol: TCP
               resources:
                 requests:
@@ -140,12 +140,12 @@ objects:
               livenessProbe:
                 httpGet:
                   path: /apis/studio/v1/system/info
-                  port: 8080
+                  port: 8090
                   scheme: HTTP
               readinessProbe:
                 httpGet:
                   path: /apis/studio/v1/system/info
-                  port: 8080
+                  port: 8090
                   scheme: HTTP
 
   - apiVersion: v1
@@ -160,7 +160,7 @@ objects:
         component: apicurio-studio-app
       ports:
         - name: http
-          port: 8080
+          port: 8090
           protocol: TCP
           targetPort: http
 
@@ -205,7 +205,7 @@ objects:
                   value: http://apicurio-studio-app-${NAMESPACE}.${INGRESS_ROUTER_APPS_HOSTNAME}/apis/studio/v1
               ports:
                 - name: http
-                  containerPort: 8080
+                  containerPort: 8090
                   protocol: TCP
               resources:
                 requests:
@@ -217,12 +217,12 @@ objects:
               livenessProbe:
                 httpGet:
                   path: /config.js
-                  port: 8080
+                  port: 8090
                   scheme: HTTP
               readinessProbe:
                 httpGet:
                   path: /config.js
-                  port: 8080
+                  port: 8090
                   scheme: HTTP
 
   - apiVersion: v1
@@ -237,7 +237,7 @@ objects:
         component: apicurio-studio-ui
       ports:
         - name: http
-          port: 8080
+          port: 8090
           protocol: TCP
           targetPort: http
 

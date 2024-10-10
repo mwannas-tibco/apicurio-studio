@@ -8,7 +8,7 @@ This section explains how to install and run {studio} with storage in a PostgreS
 
 * You must have Docker installed and the Docker daemon running.
 * Ensure that you can connect to the quay.io container repository.
-* You must already have a PostgreSQL database server installed and running. For example: 
+* You must already have a PostgreSQL database server installed and running. For example:
 +
 [source,bash]
 ----
@@ -40,7 +40,7 @@ $ docker pull quay.io/apicurio/apicurio-studio-ui:VERSION
 +
 [source,bash,subs=attributes+]
 ----
-$ docker run -it -p 8080:8080 \
+$ docker run -it -p 8090:8090 \
   -e APICURIO_STORAGE_DB_KIND=postgresql \
   -e APICURIO_DATASOURCE_URL=jdbc:postgresql://localhost:5432/apicurio-studio \
   -e APICURIO_DATASOURCE_USERNAME=apicurio-studio \
@@ -53,7 +53,7 @@ $ docker run -it -p 8080:8080 \
 +
 [source,bash,subs=attributes+]
 ----
-$ docker run -it -p 8888:8080 quay.io/apicurio/apicurio-studio-ui:{studio-docker-version}
+$ docker run -it -p 8888:8090 quay.io/apicurio/apicurio-studio-ui:{studio-docker-version}
 ----
 +
 The {studio} web console will be available at http://localhost:8888[].
@@ -62,7 +62,7 @@ The {studio} web console will be available at http://localhost:8888[].
 +
 [source,bash]
 ----
-$ curl http://localhost:8080/apis/studio/v1/designs
+$ curl http://localhost:8090/apis/studio/v1/designs
 ----
 
 . Verify that the response is similar to the following example:

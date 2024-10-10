@@ -1,6 +1,6 @@
 const ApicurioStudioConfig = {
     apis: {
-        studio: "http://localhost:8080/apis/studio/v1"
+        studio: "http://localhost:8090/apis/studio/v1"
     },
     components: {
         editors: {

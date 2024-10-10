@@ -110,9 +110,9 @@ jobs:
       - name: Run Integration tests
         run: |
           echo "Starting Studio App (In Memory)"
-          docker run -it -p 8080:8080 -d ttl.sh/${{ github.sha }}/apicurio/apicurio-studio:1d
+          docker run -it -p 8090:8090 -d ttl.sh/${{ github.sha }}/apicurio/apicurio-studio:1d
 
-          mvn verify --no-transfer-progress -Pintegration-tests -Pci -Dquarkus.http.test-host=127.0.0.1 -Dquarkus.http.test-port=8080 -pl integration-tests -Dmaven.javadoc.skip=true
+          mvn verify --no-transfer-progress -Pintegration-tests -Pci -Dquarkus.http.test-host=127.0.0.1 -Dquarkus.http.test-port=8090 -pl integration-tests -Dmaven.javadoc.skip=true
 
       - name: Collect logs
         if: failure()
@@ -183,9 +183,9 @@ jobs:
       - name: Run UI tests
         run: |
           echo "Starting Studio App (In Memory)"
-          docker run -it -p 8080:8080 -d ttl.sh/${{ github.sha }}/apicurio/apicurio-studio:1d
+          docker run -it -p 8090:8090 -d ttl.sh/${{ github.sha }}/apicurio/apicurio-studio:1d
           echo "Starting Studio UI"
-          docker run -it -p 8888:8080 -d ttl.sh/${{ github.sha }}/apicurio/apicurio-studio-ui:1d
+          docker run -it -p 8888:8090 -d ttl.sh/${{ github.sha }}/apicurio/apicurio-studio-ui:1d
 
           cd ui/tests
           npm install
@@ -193,7 +193,7 @@ jobs:
 
           echo "App System Info:"
           echo "--"
-          curl -s http://localhost:8080/apis/studio/v1/system/info
+          curl -s http://localhost:8090/apis/studio/v1/system/info
           echo "--"
           echo ""
           echo "UI Config Info (Local):"
@@ -203,7 +203,7 @@ jobs:
           echo ""
           echo "UI Config Info (Remote):"
           echo "--"
-          curl -s http://localhost:8080/apis/studio/v1/system/uiConfig
+          curl -s http://localhost:8090/apis/studio/v1/system/uiConfig
           echo "--"
           echo ""
           echo "UI Version Info:"

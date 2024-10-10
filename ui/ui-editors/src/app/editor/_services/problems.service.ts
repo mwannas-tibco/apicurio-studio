@@ -250,7 +250,7 @@ var PROBLEM_EXPLANATIONS = {
     "OP-005"   : `When you indicate that an Operation consumes a particular type of data, you must provide a valid mime-type.  Examples of valid mime types include:  text/plain, application/json, application/x-www-form-urlencoded.`,
     "OP-006"   : `When you indicate that an Operation produces a particular type of data, you must provide a valid mime-type.  Examples of valid mime types include:  text/plain, application/json, application/pdf.`,
     "PAR-010"  : `The description of the Parameter must be in either plain text or Github-Flavored Markdown format.  Have a look at the value to make sure it's not something else (asciidoc, html, etc...).`,
-    "R-004"    : `The provided Host information was invalid.  Only the host name (and optionally port) should be included.  An IP address is not allowed, nor is a URL.  Examples of a valid host include "localhost", "api.example.org", and "api.example.org:8080".`,
+    "R-004"    : `The provided Host information was invalid.  Only the host name (and optionally port) should be included.  An IP address is not allowed, nor is a URL.  Examples of a valid host include "localhost", "api.example.org", and "api.example.org:8090".`,
     "R-005"    : `When providing a Base Path for the API, it must start with a '/' character.  The Base Path is appended to the Scheme and Host information to form a full URL to the API.`,
     "SS-011"   : `An OAuth Security Scheme defintion may include an "Authorization URL".  When included, it must be a valid URL format (including scheme, host, port, and path).`,
     "SS-012"   : `An OAuth Security Scheme defintion may include a "Token URL".  When included, it must be a valid URL format (including scheme, host, port, and path).`,

@@ -40,7 +40,7 @@ spec:
               value: password
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8090
               protocol: TCP
           resources:
             requests:
@@ -52,10 +52,10 @@ spec:
           livenessProbe:
             httpGet:
               path: /apis/studio/v1/system/info
-              port: 8080
+              port: 8090
               scheme: HTTP
           readinessProbe:
             httpGet:
               path: /apis/studio/v1/system/info
-              port: 8080
+              port: 8090
               scheme: HTTP

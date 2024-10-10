@@ -5,11 +5,11 @@ services:
   app:
     image: quay.io/apicurio/apicurio-studio:latest-snapshot
     ports:
-      - '8080:8080'
+      - '8090:8090'
 
   ui:
     image: quay.io/apicurio/apicurio-studio-ui:latest-snapshot
     ports:
-      - '8888:8080'
+      - '8888:8090'
     depends_on:
       - app

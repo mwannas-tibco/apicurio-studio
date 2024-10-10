@@ -242,6 +242,7 @@ export class EditorMasterComponent extends AbstractBaseComponent {
      */
     public responses(): (Oas20ResponseDefinition | Oas30ResponseDefinition)[] {
         let viz: FindResponseDefinitionsVisitor = new FindResponseDefinitionsVisitor(this.filterCriteria);
+        console.log("log", this.document);
         if (!this._responses) {
             if (this.document.is2xDocument() && (this.document as Oas20Document).responses) {
                 (this.document as Oas20Document).responses.getResponses().forEach( response => {
@@ -823,6 +824,8 @@ export class EditorMasterComponent extends AbstractBaseComponent {
         };
         dtEditor.open(handler, this.document);
     }
+
+
 
     /**
      * Opens the Add Response Editor (full screen editor for adding a response).

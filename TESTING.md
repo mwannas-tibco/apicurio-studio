@@ -68,13 +68,13 @@ For example, you can run the tests against the docker version of Studio by doing
 
 ```
 docker pull quay.io/apicurio/apicurio-studio:latest-snapshot
-docker run -it -p 8080:8080 quay.io/apicurio/apicurio-studio:latest-snapshot
+docker run -it -p 8090:8090 quay.io/apicurio/apicurio-studio:latest-snapshot
 ```
 
 ### Run the integration tests against the running docker container
 
 ```
-mvn verify -Psmoke -Dquarkus.http.test-host=127.0.0.1 -Dquarkus.http.test-port=8080
+mvn verify -Psmoke -Dquarkus.http.test-host=127.0.0.1 -Dquarkus.http.test-port=8090
 ```
 
 

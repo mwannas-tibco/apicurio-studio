@@ -1343,7 +1343,7 @@ data:
           "id": "69afe60b-7329-440a-9b4c-0ebec33d8902",
           "clientId": "studio-api",
           "rootUrl": "",
-          "adminUrl": "http://localhost:8080",
+          "adminUrl": "http://localhost:8090",
           "surrogateAuthRequired": false,
           "enabled": true,
           "alwaysDisplayInConsole": false,

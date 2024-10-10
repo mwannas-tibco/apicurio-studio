@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { StudioClientFactory } from "../lib/sdk/factory.ts";
 
-const client = StudioClientFactory.createStudioClient("http://localhost:8080/apis/studio/v1/");
+const client = StudioClientFactory.createStudioClient("http://localhost:8090/apis/studio/v1/");
 await client.system.info.get().then(info => {
     console.info("SYSTEM INFO: ", info);
 }).catch(error => {

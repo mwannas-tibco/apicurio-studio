@@ -29,4 +29,4 @@ Once the development server is running you can access the UI via http://localhos
 Note that you will need a registry back-end running for the UI to actually work.  The easiest way to do this is using
 docker, but you could also run the registry from maven or any other way you choose.  Here is how you do it with Docker:
 
-`docker run -it -p 8080:8080 apicurio/apicurio-studio:latest-snapshot`
+`docker run -it -p 8090:8090 apicurio/apicurio-studio:latest-snapshot`

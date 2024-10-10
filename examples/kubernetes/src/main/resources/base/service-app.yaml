@@ -9,6 +9,6 @@ spec:
     component: apicurio-studio-app
   ports:
     - name: http
-      port: 8080
+      port: 8090
       protocol: TCP
       targetPort: http

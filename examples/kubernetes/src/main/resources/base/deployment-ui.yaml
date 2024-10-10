@@ -21,10 +21,10 @@ spec:
           image: IMAGE_UI
           env:
             - name: APICURIO_STUDIO_API_URL
-              value: http://localhost:8080/apis/studio/v1
+              value: http://localhost:8090/apis/studio/v1
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8090
               protocol: TCP
           resources:
             requests:
@@ -36,10 +36,10 @@ spec:
           livenessProbe:
             httpGet:
               path: /config.js
-              port: 8080
+              port: 8090
               scheme: HTTP
           readinessProbe:
             httpGet:
               path: /config.js
-              port: 8080
+              port: 8090
               scheme: HTTP
